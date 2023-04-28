@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+    <form  id="regForm" action="#" name="register" onsubmit="return Validate();" method="POST">
+        <h3>GENQ KYC FORM</h3>
+        
+        <div>
+            <h1><u> Bio Data<h></u></h1>
+            <input type="text" name="firstname"  value="" size="22" placeholder="First Name"/> 
+            <small id="firstnameErr"></small>
+            <input type="text" name="lastname" size="22" placeholder="Last Name"/> <br> <br>
+            <small id="lastnameErr"></small>
+        </div>
+        
+        <div>
+            <input type="date" name="Dob"  value="" size="22" placeholder="Date Of Birth(DD/MM/YYYY)" oninput="ValidateDob"/> 
+            <small id="dobErr"></small>
+            
+            <select name="gender"  style="width: 12.5%;" ><br><br>
+                <option value="" disabled selected>--Select Gender--</option>
+                <option >Male</option>
+                <option >Female</option>
+                </select>
+            <small id="genderErr"></small>
+        </div>
+        
+         
+         <h1><u>Location</u></h1>
+
+         <div>
+            <select name="Country"  style="width: 12.5%;" ><br><br>
+                <option value="" disabled selected>Country</option>
+                <option >Kenya</option>
+                <option >Uganda</option>
+                <option >Burundi</option>
+                <option >Tanzania</option>
+                <option >Rwanda</option>
+                <option >Sudan</option>
+                </select>
+              <small id="CountryErr"></small>
+              
+            <input type="text" name="state" size="22" placeholder="State/District"/> <br> <br>
+            <small id="stateErr"></small>
+            
+        </div>
+        <div>
+            <input type="text" name="town"  value="" size="22" placeholder="Town"/> 
+            <small id="townErr"></small>
+            <input type="text" name="zipcode" size="22" placeholder="Zip Code"/> <br> 
+            <small id="zipcodeErr"></small>
+        </div>
+        
+        <h1><u>Contacts and Address</u></h1>
+        
+       <div>
+        <input type="text" name="phone1"  value="" size="22" placeholder="Phone Number 1"/> 
+        <input type="text" name="phone2" size="22" placeholder="Phone Number 2"/> <br> <br>
+    </div>
+    <div>
+        <input type="email" name="Email"  value="" size="55" placeholder="Email"/> 
+        <small id="emailErr"></small>
+       
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4"><br>
+          <button class="btn btn-success" style="background-color: yellow;" type="submit" value="Submit" id="submit">Submit</button>
+        </div>
+      </div>
+    </center>
+</body>
+       <!-- <script src="./regform.js"></script> -->
+        
+</body>
+</html>

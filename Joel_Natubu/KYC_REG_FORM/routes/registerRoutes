@@ -1,0 +1,32 @@
+const express= require ('express');
+const router=express.Router();
+const {Model}=require('mongoose');
+
+
+
+// imported model
+const Register = require("../models/registerModel")
+router.get("/register",(req,res)=>{
+    res.render("register")
+    });
+
+    router.post("/register", async(req, res)=>{
+        //try and cattch is used for error handling
+        try{
+            //created a variable register to store the new student to be created in the database by using data coming from the body on the frontend to create new object
+            const register= new Register(req.body);
+            await register.save()
+            res.redirect("register")
+            console.log(req.body)
+        }
+        catch (err){
+          
+           console.log(err)
+           
+        }
+    });
+
+  
+
+     
+    module.exports=router

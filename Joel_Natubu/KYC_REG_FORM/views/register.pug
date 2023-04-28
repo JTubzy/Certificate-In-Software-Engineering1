@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Registration Form
+center
+  form#regForm(action='#' name='register' onsubmit='return Validate();' method='POST')
+    h3 GENQ KYC FORM
+    
+    div
+    <h1><u> Bio Data<h1></u></h1>
+      input(type='text' name='firstname' value='' size='22' placeholder='First Name')
+      small#firstnameErr
+      input(type='text' name='lastname' size='22' placeholder='Last Name')
+      
+      
+      small#lastnameErr
+    div
+      input(type='text' name='Dob' value='' size='22' placeholder='Date Of Birth(DD/MM/YYYY)')
+      small#dobErr
+      input(type='text' name='gender' size='22' placeholder='Gender')
+      br
+      
+      small#genderErr
+    <h1><u>Location</u></h1>
+    div
+      select(name='Country' style='width: 12.5%;')
+        br
+        br
+        option(value='' disabled='' selected='') Country
+        option Kenya
+        option Uganda
+        option Burundi
+        option Tanzania
+        option Rwanda
+        option Sudan
+      small#CountryErr
+      input(type='text' name='state' size='22' placeholder='State/District')
+      br
+      br
+      small#stateErr
+    div
+      input(type='text' name='town' value='' size='22' placeholder='Town')
+      small#townErr
+      input(type='text' name='zipcode' size='22' placeholder='Zip Code')
+      br
+      
+      small#zipcodeErr
+    
+    
+    <h1><u>Contacts and Address</u></h1>
+    div
+      input(type='text' name='phone1' value='' size='22' placeholder='Phone Number 1')
+      input(type='text' name='phone2' size='22' placeholder='Phone Number 2')
+      br
+      br
+    div
+      input(type='email' name='Email' value='' size='55' placeholder='Email')
+    br
+    .form-group
+      label.col-md-4.control-label
+      .col-md-4
+        br
+        button#submit.btn.btn-success(style='background-color: yellow;' type='submit' value='Submit') Submit
